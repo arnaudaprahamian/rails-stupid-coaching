@@ -1,0 +1,16 @@
+<div class="container text-center">
+  <h1>Stupid Coaching !</h1>
+
+  <h2>You ask the coach: <%= @question %>
+  <p>Answer:<p>
+  <%if @question.downcase == "i am going to work right now!" %>
+    <h2>Good Boy!</h2>
+  <% elsif @question.end_with?("?") %>
+    <h2>Silly question, get dressed and go to work!</h2>
+  <% else %>
+    <h2>I don't care, get dressed and go to work!</h2>
+  <% end %>
+
+  <%= link_to "Ask another question ?", ask_path %>
+
+</div>
